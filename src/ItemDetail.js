@@ -18,13 +18,25 @@ function ItemDetail({match}) {
         console.log(item);
     }
     
+    if(item.properties.description == "") {
+        return(
+            <div>
+                <h3>{item.properties.areaDesc}</h3>
+                <h5>There is nothing.</h5>
+            </div>
+        );
+    }
+    else {
+        return(
+            <div>
+                <h3>{item.properties.areaDesc}</h3>
+                <h5>{item.properties.description}</h5>
+            </div>
+        );
+    }
+
+
     
-    return(
-        <div>
-            <h2>{item.properties.areaDesc}</h2>
-            <h3>{item.properties.description}</h3>
-        </div>
-    );
 };
 
 

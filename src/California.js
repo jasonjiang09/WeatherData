@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import './Shop.css';
+
 import {Link} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import './California.css';
 
 
-function Shop() {
+function California() {
 
   useEffect(() => {
     fetchItems();
@@ -23,10 +27,12 @@ function Shop() {
 
   return(
     <div>
+      <h2>California</h2>
+
       {items.map(item => (
-        <h2 key={item.properties.id}>
-          <Link to={`/shop/${item.properties.id}`}>{item.properties.areaDesc}</Link>
-        </h2>
+        <Button variant="secondary" size="lg" block key={item.properties.id}>
+          <Link to={`/state/${item.properties.id}`}>{item.properties.areaDesc}</Link>
+        </Button>
       ))}
       
     </div>
@@ -34,4 +40,4 @@ function Shop() {
 };
 
 
-export default Shop;
+export default California;

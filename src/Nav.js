@@ -7,16 +7,21 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function Nav() {
   return(
     <nav>
-        <h2>Weather Forcast</h2>
+        <h2>Weather Report for California and Texas</h2>
         <ui className="nav-links">
             <Link to='/about'>
             <Button variant="primary" size="lg">
               About
             </Button>
             </Link>
-            <Link to='/shop'>
+            <Link to='/california'>
               <Button variant="primary" size="lg">
-                Shop
+                California
+              </Button>
+            </Link>
+            <Link to='/texas'>
+              <Button variant="primary" size="lg">
+                Texas
               </Button>
             </Link>
         </ui>
